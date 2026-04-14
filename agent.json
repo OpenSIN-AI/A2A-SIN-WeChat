@@ -1,0 +1,34 @@
+{
+  "name": "A2A-SIN-WeChat",
+  "slug": "a2a-sin-wechat",
+  "type": "Messaging Agent",
+  "description": "WeChat messaging agent",
+  "team": "Team Messaging",
+  "teamManager": "A2A-SIN-Messaging",
+  "primaryModel": "google/antigravity-gemini-3-flash",
+  "capabilities": [
+    "wechat_messaging",
+    "contact_management"
+  ],
+  "marketplace": {
+    "pricingModel": "subscription",
+    "monthlyPrice": 29.99,
+    "purchaseModes": [
+      "monthly",
+      "annual"
+    ],
+    "category": "messaging"
+  },
+  "controlPlane": {
+    "healthEndpoint": "/health",
+    "cardEndpoint": "/.well-known/agent-card.json",
+    "a2aEndpoint": "/a2a/v1"
+  },
+  "deployment": {
+    "workforceIndex": "team-messaging",
+    "landingPage": "https://a2a.delqhi.com/agents/a2a-sin-wechat",
+    "publicA2A": "https://a2a.delqhi.com/a2a/v1/a2a-sin-wechat",
+    "cimdAnchor": "https://a2a.delqhi.com/agents/a2a-sin-wechat",
+    "vmServer": "hf-cpu-basic"
+  }
+}
